@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ROOTFS_DIR=/projects/panel
+ROOTFS_DIR=/home/user/panel
 export PATH=$PATH:~/.local/usr/bin
 
 max_retries=50
