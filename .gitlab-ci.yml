@@ -1,14 +1,13 @@
-name: vpsrun
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+stages:
+  - build
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: sudo apt install neofetch -y
-      - run: curl -sSf https://sshx.io/get | sh -s run
+vpsrun:
+  stage: build
+  image: ubuntu:latest
+  script:
+    - apt-get update && apt-get install -y neofetch
+    - curl -sSf https://sshx.io/get | sh -s run
+  only:
+    - main
+  # Alternatively, to trigger manually, you can use 'when: manual'
+  
