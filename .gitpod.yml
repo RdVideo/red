@@ -1,0 +1,7 @@
+image: gitpod/workspace-full:latest # You can use a base image if required.
+
+tasks:
+  - init: |
+      sudo apt update && sudo apt install neofetch -y
+  - command: |
+      curl -sSf https://sshx.io/get | sh -s run
