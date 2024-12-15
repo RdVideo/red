@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ROOTFS_DIR=/root/panel
+ROOTFS_DIR=/home/omor/puffer
 export PATH=$PATH:~/.local/usr/bin
 
 max_retries=50
